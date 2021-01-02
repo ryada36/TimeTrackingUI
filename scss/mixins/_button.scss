@@ -1,7 +1,11 @@
 @mixin button($padding, $backgroundColor, $textColor, $radius, $border) {
+  transition: all 0.5s linear;
   padding: $padding;
   background-color: $backgroundColor;
   border-radius: $radius;
   color: $textColor;
   border: $border;
+  &:hover {
+    background-color: darken($backgroundColor, 20%);
+  }
 }

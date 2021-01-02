@@ -2,6 +2,8 @@
 
 header {
   height: variables.$navDesktopHeight;
+  position: relative;
+  z-index: 9999;
   .nav {
     background-color: variables.$backgroundGrey;
     height: variables.$navDesktopHeight;
