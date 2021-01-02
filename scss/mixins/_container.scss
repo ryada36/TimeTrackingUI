@@ -1,0 +1,5 @@
+@mixin container($width) {
+  position: relative;
+  width: $width;
+  padding: 0 15px;
+}

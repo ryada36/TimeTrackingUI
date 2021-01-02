@@ -1,0 +1,71 @@
+@use '../settings' as variables;
+
+header {
+  height: variables.$navDesktopHeight;
+  .nav {
+    background-color: variables.$backgroundGrey;
+    height: variables.$navDesktopHeight;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    .nav__logo {
+      position: relative;
+      display: flex;
+      height: variables.$navDesktopHeight;
+      align-items: center;
+      font-size: 20px;
+      font-weight: 500;
+      position: relative;
+      margin-right: 50px;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        bottom: 14px;
+        background-color: variables.$lightGrey;
+      }
+    }
+    .nav__menu {
+      display: flex;
+
+      .nav__menu__item {
+        width: 80px;
+        text-align: center;
+        height: inherit;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        &:hover {
+          background-color: variables.$backgroundBlack;
+        }
+      }
+    }
+    .nav__action {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      .nav__action__button {
+        @include button(
+          11px 24px,
+          transparent,
+          variables.$textColorWhite,
+          4px,
+          2px solid #{variables.$lightGrey}
+        );
+        font-size: 11px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: variables.$backgroundBlack;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@use '_settings' as var;
+@use '_typography';
+@import "_allMixins";
+@import "./utils/_nav";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  @include container(var.$desktopContainerWidth);
+  max-width: 100%;
+  display: flex;
+  margin: 0 auto;
+
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+}

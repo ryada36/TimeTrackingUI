@@ -1,0 +1,20 @@
+@use './settings' as variables;
+
+body {
+  font-family: variables.$font, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: variables.$textColorWhite;
+}
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 25px;
+  font-weight: 500;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
